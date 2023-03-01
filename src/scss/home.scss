@@ -1,0 +1,245 @@
+.wrapp {
+    border-top: 1px solid #EFEFEF;
+    position: relative;
+    background-color: #EFEFEF;
+    z-index: 1;
+    line-height: 20px;
+
+    &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-image: url(img/Rectangle2.jpg);
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 604px;
+        top: 0px;
+        z-index: -1;
+    }
+}
+
+
+
+.ad {
+    margin-top: 193px;
+    margin-bottom: 193px;
+    max-width: 308px;
+}
+
+.ad__title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.ad__subtitle {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.ad__more {
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: 13px 26px;
+    border-radius: 40px;
+    color: #fff;
+}
+
+.special {
+    padding-top: 80px;
+    margin-bottom: 100px;
+}
+
+.special__title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 38px;
+}
+
+.special__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.special__item {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 255px;
+}
+
+.special__item-img {
+    width: 125px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.special__item-title {
+    text-align: center;
+    margin: 0 20px 20px 20px;
+}
+
+.special__item-price {
+    font-weight: 500;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.special__item-buy {
+    margin-bottom: 25px;
+    padding: 9px 40px;
+    background-color: #66C05D;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.aside {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-bottom: 130px;
+
+    div+div {
+        margin-left: 20px;
+    }
+}
+
+.aside__bonus {
+    background-color: #66C05D;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 45px;
+    width: 540px;
+    align-items: center;
+}
+
+.aside__bonus-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.aside__title {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.aside__bonus-email {
+    margin-top: 25px;
+    padding: 9px 25px;
+    border-radius: 30px;
+}
+
+.aside__bonus-icon {
+    width: 140px;
+    height: 106px;
+}
+
+.aside__map {
+    display: flex;
+    flex-direction: column;
+    background-color: #66C05D;
+    padding: 35px 45px;
+    width: 540px;
+}
+
+.aside__map-text {
+    max-width: 150px;
+    margin-bottom: 25px;
+}
+
+.aside__map-link {
+    border: 2px solid #fff;
+    padding: 9px 28px;
+    border-radius: 30px;
+    max-width: 180px;
+}
+
+
+@media (max-width: 1100px) {
+    .special__items {
+        justify-content: space-around;
+
+        .special__item {
+            max-width: 200px;
+        }
+    }
+
+    .aside__bonus-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .special__items {
+        font-size: 12px;
+
+        .special__item {
+            max-width: 200px;
+
+            .special__item-price {
+                font-size: 16px;
+            }
+        }
+
+        div+div {
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .special__items {
+        flex-wrap: wrap;
+
+        .special__item {
+            margin-bottom: 20px;
+            min-width: 220px;
+        }
+    }
+
+    .aside {
+        flex-direction: column;
+
+        div+div {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .special__items {
+
+        .special__item {
+            max-width: 100%;
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .ad__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .aside {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .aside__bonus-email {
+        width: 1005px;
+        max-width: 150px;
+    }
+
+    .aside__bonus,
+    .aside__map {
+        width: 280px;
+    }
+}

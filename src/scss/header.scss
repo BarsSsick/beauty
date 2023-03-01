@@ -1,0 +1,164 @@
+.header__menu {
+	background-color: #E5E5E5;
+	color: #333333;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		background-color: #EFEFEF;
+		height: 1px;
+		width: 100%;
+		bottom: -120px;
+	}
+}
+
+.header__menu-list {
+	display: flex;
+	justify-content: center;
+
+	li {
+		padding: 15px;
+	}
+}
+
+.header__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	font-size: 16px;
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
+	z-index: 10;
+}
+
+.header__logo-img {
+	margin-right: 20px;
+}
+
+.phone {
+	display: flex;
+	align-items: center;
+}
+
+.phone__number {
+	margin-right: 40px;
+	font-size: 16px;
+}
+
+.phone__btn {
+	padding: 12px 26px;
+	border: 2px solid #66C05D;
+	border-radius: 40px;
+}
+
+.main-menu__list {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+
+	li {
+		padding: 30px 40px;
+	}
+}
+
+.menu-mobile {
+	display: none;
+}
+
+
+
+@media (max-width: 880px) {
+	.main-menu__list {
+		display: none;
+	}
+
+	.header__menu {
+		display: none;
+	}
+
+	.menu-btn {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 45px;
+		height: 24px;
+		cursor: pointer;
+		z-index: 10;
+	}
+
+	.menu-btn span {
+		width: 100%;
+		height: 4px;
+		background-color: #66C05D;
+		border-radius: 2px;
+	}
+
+	.menu-mobile {
+		display: none;
+	}
+
+	.menu-mobile.menu--open {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #fff;
+		height: 100vh;
+		z-index: 5;
+		text-align: center;
+		padding-top: 100px;
+
+		ul+ul {
+			margin-top: 50px;
+		}
+
+		li {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 760px) {
+	.phone {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.phone__btn {
+			padding: 7px 15px;
+		}
+
+		.phone__number {
+			font-size: 15px;
+			margin-bottom: 10px;
+			margin-right: 0;
+		}
+	}
+
+	.header__logo {
+		.header__logo-img {
+			width: 50px;
+			margin-right: 10px;
+		}
+
+		.header__logo-name {
+			width: 90px;
+		}
+	}
+}
+
+
+@media (max-width: 480px) {
+	.phone {
+		display: none;
+	}
+}
